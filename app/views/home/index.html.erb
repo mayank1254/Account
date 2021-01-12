@@ -1,0 +1,20 @@
+<% if @customer_details.present? %>
+  <table>
+    <tr>
+      <th>OpenDate</th>
+      <th>CustomerName</th>
+      <th>Branch </th>
+      <th>Indicator</th>
+    </tr>
+    <% @customer_details.each do |customer_detail| %>
+      <tr>
+        <td> <%= customer_detail["open_date"] %> </td>
+        <td> <%= customer_detail["customer_name"] %> </td>
+        <td> <%= customer_detail["branch"] %> </td>
+        <td> <%= customer_detail["indicator"] %> </td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <h2>No Record Present</h2>
+<% end %>
